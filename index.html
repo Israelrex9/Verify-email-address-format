@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@200;300;400&display=swap" rel="stylesheet">
+  
+  <title>Israel Rex | Pod request access landing page</title>
+
+</head>
+<body class="bg-pm-blue mx-auto justify-items-center lg:max-w-screen-xl md:max-w-screen-md max-w-sm">
+  <div class="mt-24">
+    <img src="./assets/logo.svg" alt="logo"/>
+  </div>
+  <div class="flex items-end">
+    <div class="bg-pm-blue mt-[88px] mr-[58px] z-10 lg:max-w-3xl md:max-w-2xl max-w-xs">
+      <h1 class="text-green font-chivo font-thin md:text-left text-center lg:text-[52px] md:text-[48px] text-[27px] my-0 w-[665px] leading-[62px] mb-6">PUBLISH YOUR PODCASTS <span class="text-white">EVERYWHERE.</span></h1>
+      <P class="text-blue3 max-w-md font-extralight md:text-left text-center text-[18px] leading-[28px] mb-10">Upload your audio to Pod with a single click. We’ll then distribute your podcast
+        to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</P>
+      <div class="mb-16 space-y-[10px]">
+        <form >
+          <div class="flex justify-between w-[427px] bg-blue1 rounded-full py-[5px] px-[5px]">
+            <input class="text-blue3 bg-blue1 w-60 rounded-full pl-[20px] focus:outline-none dark:text-white"
+            id="mail" type="text" placeholder="Email address" />
+            <button onclick="validate()" type="button" class="bg-green hover:bg-[#B3FFE2] text-blue py-[9px] px-[27px] rounded-full font-semibold text-sm leading-[28px]">Request Access</button>
+          </div>
+        </form>
+        <p class="text-xs font-bold text-red-600 pl-[25px]" id="error_message"></p>
+      </div>
+      <div class="flex justify-between max-w-xl h-[29px]">
+        <img src="./assets/desktop/spotify.svg" alt="spotify"/>
+        <img src="./assets/desktop/apple-podcast.svg" alt="Apple Podcast"/>
+        <img src="./assets/desktop/google-podcasts.svg" alt="Google Podcast"/>
+        <img src="./assets/desktop/pocket-casts.svg" alt="Pockets casts"/>
+      </div>
+    </div>
+    <div class="z-0 w-[962px] h-[640px]">
+      <img class="object-cover object-right-bottom w-[962px] h-[640px]" src="./assets/desktop/image-host.jpg" alt="host">
+    </div>
+  </div>
+
+  <script>
+      
+      function validate(){
+        var email = document.getElementById("mail");
+        var emailError = document.getElementById("error_message");
+        
+        if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+          emailError.innerText = "Oops! Please check your email";
+          return false;
+        }
+      }
+  </script>
+</body>
+</html>
